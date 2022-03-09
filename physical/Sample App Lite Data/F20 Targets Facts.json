@@ -1,0 +1,21 @@
+{
+  "physicalTable": {
+    "name": "F20 Targets Facts",
+    "description": "Alias to the Targets Facts Physical table. Aliasing allows multiple representation of the same physical table source in the RPD physical model. It also helps maintenance and lineage.",
+    "sourceTable": "physicalTable:Sample App Lite Data.SAMP_TARGETS_F",
+    "caching": {
+      "enable": true
+    },
+    "additionalKeys": [
+      [
+        "Prod_Key"
+      ],
+      [
+        "Bill_Mth_Key"
+      ],
+      [
+        "Office_Key"
+      ]
+    ]
+  }
+}

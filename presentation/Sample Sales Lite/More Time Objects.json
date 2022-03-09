@@ -1,0 +1,55 @@
+{
+  "presentationTable": {
+    "name": "More Time Objects",
+    "description": "->\r\nThis folder contains additional time attributes like Calendar time attributes and Julian period numbers.",
+    "presentationColumns": [ {
+        "name": "Day Of Week",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.D0 Time.Day Of Week",
+        "description": "Day of Week is an integer and is a value between 1 and 7"
+      },
+      {
+        "name": "Day Of Month",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.D0 Time.Day Of Month",
+        "description": "Day of Month is an integer and a value between 1 and 31."
+      },
+      {
+        "name": "Day Of Year",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.D0 Time.Day Of Year",
+        "description": "Day of Year is an integer and a value between 1 and 366."
+      },
+      {
+        "name": "Julian Day Num",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.D0 Time.Julian Day Num",
+        "description": "Stores the Julian Day Number as an integer."
+      },
+      {
+        "name": "Julian Week Num",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.D0 Time.Julian Week Num",
+        "description": "Stores the Julian Week Number as an integer."
+      },
+      {
+        "name": "Julian Month Num",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.D0 Time.Julian Month Num",
+        "description": "Stores the Julian Month Number as an integer."
+      },
+      {
+        "name": "Julian Qtr Num",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.D0 Time.Julian Qtr Num",
+        "description": "Stores the Julian Quarter Number as an integer."
+      }
+    ],
+    "permissions": [ {
+        "accessor": "role:BIAdministrator",
+        "access": "READ"
+      },
+      {
+        "accessor": "role:BIAuthor",
+        "access": "READ"
+      },
+      {
+        "accessor": "role:BIConsumer",
+        "access": "WRITE"
+      }
+    ]
+  }
+}

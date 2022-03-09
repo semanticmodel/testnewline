@@ -1,0 +1,87 @@
+{
+  "presentationTable": {
+    "name": "Offices",
+    "description": "Offices dimension objects and attributes",
+    "presentationColumns": [ {
+        "name": "Office",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.D2 Offices.Office",
+        "description": "Returns the Office description from the Office dimension. This column is logically sorted by BIEE server according to the Office Sequence column value.  Naturally drills into Orders Status Column."
+      },
+      {
+        "name": "Department",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.D2 Offices.Department",
+        "description": "Returns the Department description from the Office dimension. Naturally drills into Office Column."
+      },
+      {
+        "name": "Organization",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.D2 Offices.Organization",
+        "description": "Returns the Organization description from the Office dimension.  Naturally drills into Department Column."
+      },
+      {
+        "name": "Company",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.D2 Offices.Company",
+        "description": "Returns the Company description from the Office dimension.  Naturally drills into Organization Column."
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Offices Hierarchy",
+        "alternateNames": [
+          "H3 Offices"
+        ],
+        "sourceLogicalTable": "logicalTable:SampleApp Lite.D2 Offices",
+        "levels": [ {
+            "name": "All Offices",
+            "alternateNames": [
+              "Eden Corporation",
+              "Offices Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:SampleApp Lite.D2 Offices.Total Offices"
+          },
+          {
+            "name": "Companies",
+            "alternateNames": [
+              "Company",
+              "Offices Company"
+            ],
+            "sourceLogicalLevel": "logicalLevel:SampleApp Lite.D2 Offices.Offices Company",
+            "displayColumn": "presentationColumn:Sample Targets Lite.Offices.Company"
+          },
+          {
+            "name": "Orgs",
+            "alternateNames": [
+              "Offices Organization"
+            ],
+            "sourceLogicalLevel": "logicalLevel:SampleApp Lite.D2 Offices.Offices Organization",
+            "displayColumn": "presentationColumn:Sample Targets Lite.Offices.Organization"
+          },
+          {
+            "name": "Depts",
+            "alternateNames": [
+              "Offices Department"
+            ],
+            "sourceLogicalLevel": "logicalLevel:SampleApp Lite.D2 Offices.Offices Department",
+            "displayColumn": "presentationColumn:Sample Targets Lite.Offices.Department"
+          },
+          {
+            "name": "Offices",
+            "sourceLogicalLevel": "logicalLevel:SampleApp Lite.D2 Offices.Offices Detail",
+            "displayColumn": "presentationColumn:Sample Targets Lite.Offices.Office"
+          }
+        ]
+      }
+    ],
+    "permissions": [ {
+        "accessor": "role:BIAdministrator",
+        "access": "READ"
+      },
+      {
+        "accessor": "role:BIAuthor",
+        "access": "READ"
+      },
+      {
+        "accessor": "role:BIConsumer",
+        "access": "WRITE"
+      }
+    ]
+  }
+}

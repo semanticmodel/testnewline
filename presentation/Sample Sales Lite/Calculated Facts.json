@@ -1,0 +1,65 @@
+{
+  "presentationTable": {
+    "name": "Calculated Facts",
+    "description": "Following folders contain various metrics directly calculated by OBIEE server.",
+    "presentationColumns": [ {
+        "name": "Actual Unit Price",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.F0 Revenue Base Measures.Actual Unit Price",
+        "description": "This logical object calculates the Actua Unit Price by dividing Revenue by Units."
+      },
+      {
+        "name": "Avg Order Size",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.F0 Revenue Base Measures.Avg Order Size",
+        "description": "This logical object calculates the Actual Average Oder Size by dividing Total Revenue by number of Distinct Orders."
+      },
+      {
+        "name": "# of Orders",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.F0 Revenue Base Measures.# of Orders",
+        "description": "This metric counts the distinct number of orders in the query population. The aggregation is a Count Distinct aggregation"
+      },
+      {
+        "name": "# of Products with Orders",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.F0 Revenue Base Measures.# of Products with Orders",
+        "description": "This metric counts the distinct number of Products in the query population. The aggregation is a Count Distinct aggregation"
+      },
+      {
+        "name": "# of Offices with Orders",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.F0 Revenue Base Measures.# of Offices with Orders",
+        "description": "This metric counts the distinct number of orders in the query population. The aggregation is a Count Distinct aggregation"
+      },
+      {
+        "name": "Full Month Revenue",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.F0 Revenue Base Measures.Full Month Revenue",
+        "description": "Shows the full month sum of revenue."
+      },
+      {
+        "name": "Full Quarter Revenue",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.F0 Revenue Base Measures.Full Quarter Revenue",
+        "description": "Shows the full quarter sum of revenue."
+      },
+      {
+        "name": "All Offices Revenue",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.F0 Revenue Base Measures.All Offices Revenue",
+        "description": "Shows the sum of revenue for all offices."
+      },
+      {
+        "name": "All Products Revenue",
+        "sourceLogicalColumn": "logicalColumn:SampleApp Lite.F0 Revenue Base Measures.All Products Revenue",
+        "description": "Shows the sum of revenue for all products."
+      }
+    ],
+    "permissions": [ {
+        "accessor": "role:BIAdministrator",
+        "access": "READ"
+      },
+      {
+        "accessor": "role:BIAuthor",
+        "access": "READ"
+      },
+      {
+        "accessor": "role:BIConsumer",
+        "access": "WRITE"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "businessModel": {
+    "name": "SampleApp Lite",
+    "description": "SampleAppLite Business Model. This Business model is a minimal contruct to allow users to check that installation went through. To access a set of Samples that fully illustrate OBIEE 11g modeling capabilities, refer to the full SampleApp set freely availabe on OTN(Oracle Technology Network), OBIEE page.",
+    "joins": [ {
+        "leftTable": "logicalTable:SampleApp Lite.F0 Revenue Base Measures",
+        "rightTable": "logicalTable:SampleApp Lite.D0 Time",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "leftTable": "logicalTable:SampleApp Lite.F0 Revenue Base Measures",
+        "rightTable": "logicalTable:SampleApp Lite.D1 Products",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE",
+        "drivingTable": "logicalTable:SampleApp Lite.D1 Products"
+      },
+      {
+        "leftTable": "logicalTable:SampleApp Lite.F0 Revenue Base Measures",
+        "rightTable": "logicalTable:SampleApp Lite.D2 Offices",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "leftTable": "logicalTable:SampleApp Lite.F1 Targets Base Measures",
+        "rightTable": "logicalTable:SampleApp Lite.D2 Offices",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "leftTable": "logicalTable:SampleApp Lite.F1 Targets Base Measures",
+        "rightTable": "logicalTable:SampleApp Lite.D0 Time",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "leftTable": "logicalTable:SampleApp Lite.F1 Targets Base Measures",
+        "rightTable": "logicalTable:SampleApp Lite.D1 Products",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "leftTable": "logicalTable:SampleApp Lite.F0 Revenue Base Measures",
+        "rightTable": "logicalTable:SampleApp Lite.D3 Orders (Facts Attributes)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "physicalTable": {
+    "name": "SAMP_TIME_DAY_D",
+    "description": "Time (Day Grain) Dimension Physical table. This table is not directly used by the logical model, it is accessed via the aliases setup in the physical diagram. The database is of XML type, the setup of this physical table leverages the value of an RPD variable : BI_EE_HOME (see the XML tab in this dialog box). This variable needs to be correctly set in order for the server to connect to the files.",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_TIME_DAY_D.xml",
+    "physicalColumns": [ {
+        "name": "Calendar_Date",
+        "dataType": "DATE"
+      },
+      {
+        "name": "Day_Of_Month",
+        "dataType": "INT"
+      },
+      {
+        "name": "Day_Of_Week",
+        "dataType": "INT"
+      },
+      {
+        "name": "Day_Of_Year",
+        "dataType": "INT"
+      },
+      {
+        "name": "Julian_Day_Num",
+        "dataType": "INT"
+      },
+      {
+        "name": "Julian_Month_Num",
+        "dataType": "INT"
+      },
+      {
+        "name": "Julian_Qtr_Num",
+        "dataType": "INT"
+      },
+      {
+        "name": "Julian_Week_Num",
+        "dataType": "INT"
+      },
+      {
+        "name": "Per_Name_Half",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "Per_Name_Month",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "Per_Name_Qtr",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "Per_Name_Week",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "Per_Name_Year",
+        "dataType": "VARCHAR",
+        "length": 4
+      },
+      {
+        "name": "Day_Key",
+        "dataType": "INT"
+      }
+    ],
+    "additionalKeys": [
+      [
+        "Day_Key"
+      ]
+    ]
+  }
+}
